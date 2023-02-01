@@ -1,0 +1,12 @@
+# Test
+
+## Write in Markdown
+
+**Hello World**
+
+## Call a bash function
+
+```{bash}
+pyenv local 3.10.7
+python --version
+```
