@@ -6,11 +6,11 @@ new_session: true
 
 before_script:
   - Rscript -e "install.packages('reticulate')"
+  - Rscript -e "library(reticulate); py_install('pandas')"
 
 build:
   after:
     - echo "Installing pandas..."
-    - Rscript -e "library(reticulate); py_install('pandas')"
 
 rmd_files:
 - "index.Rmd"
