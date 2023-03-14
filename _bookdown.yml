@@ -1,4 +1,5 @@
 book_filename: "til-bookdown"
+repo: https://github.com/tillwf/til-bookdown
 output_dir: "public"
 delete_merged_file: true
 new_session: true
