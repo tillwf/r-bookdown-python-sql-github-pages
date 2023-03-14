@@ -34,4 +34,4 @@ jobs:
           restore-keys: bookdown-2-
 
       - name: Build book
-        run: Rscript -e 'bookdown::render_book("index.Rmd", quiet = TRUE)'
+        run: Rscript -e "library(reticulate); py_install('pandas')"; Rscript -e 'bookdown::render_book("index.Rmd", quiet = TRUE)'
