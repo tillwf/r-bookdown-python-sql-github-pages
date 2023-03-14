@@ -4,6 +4,15 @@ output_dir: "public"
 delete_merged_file: true
 new_session: true
 
+before_script:
+  - Rscript -e "install.packages('reticulate')"
+
+build:
+  after:
+    - echo "Installing pandas..."
+    - Rscript -e "library(reticulate); py_install('pandas')"
+
 rmd_files:
+- "index.Rmd"
 - "01-Test.Rmd"
 - "02-TestPython.Rmd"
