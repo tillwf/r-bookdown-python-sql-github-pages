@@ -5,14 +5,10 @@ delete_merged_file: true
 new_session: true
 
 before_script:
+  - echo "Before the script"
   - Rscript -e "install.packages('reticulate')"
-  - Rscript -e "library(reticulate); py_install('pandas')"
 
 build:
   after:
     - echo "Installing pandas..."
-
-rmd_files:
-- "index.Rmd"
-- "01-Test.Rmd"
-- "02-TestPython.Rmd"
+    - Rscript -e "library(reticulate); py_install('pandas')"
