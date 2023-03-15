@@ -17,5 +17,9 @@ bookdown::gitbook:
       theme: Sepia
       family: sans
       size: 2
+    sharing:
+      github: true
+      facebook: false
+      twitter: false
   split_by: chapter
   highlight: tango
