@@ -35,3 +35,10 @@ jobs:
 
       - name: Build book
         run: Rscript -e "library(reticulate); py_install('pandas')"; Rscript -e 'bookdown::render_book("index.Rmd", quiet = TRUE)'
+
+      - name: Upload book folder for debug
+        if: failure()
+        uses: actions/upload-artifact@main
+        with:
+          name: book-dir
+          path: _book
