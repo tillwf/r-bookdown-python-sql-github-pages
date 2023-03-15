@@ -33,12 +33,14 @@ jobs:
           key: bookdown-2-${{ hashFiles('**/*Rmd') }}
           restore-keys: bookdown-2-
 
-      - name: Build book
-        run: Rscript -e "library(reticulate); py_install('pandas')"; Rscript -e 'bookdown::render_book("index.Rmd", quiet = TRUE)'
+      - name: Install pandas
+        run: Rscript -e "library(reticulate); py_install('pandas')"
+
+      - name: Render book
+        run: Rscript -e 'bookdown::render_book("index.Rmd", quiet = TRUE)'
 
       - name: Upload book folder for debug
-        if: failure()
-        uses: actions/upload-artifact@main
+        uses: actions/upload-artifact@v2
         with:
           name: book-dir
           path: _book
