@@ -44,3 +44,24 @@ jobs:
         with:
           name: book-dir
           path: public
+
+  checkout-and-deploy:
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    runs-on: ubuntu-20.04
+    needs: build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          # Artifact name
+          name: book-dir # optional
+          # Destination path
+          path: public # optional
+      - name: Deploy to GitHub Pages
+        uses: Cecilapp/GitHub-Pages-deploy@v3
+        with:
+         build_dir: public
+         branch: gh-pages
