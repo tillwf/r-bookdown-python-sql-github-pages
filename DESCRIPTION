@@ -7,5 +7,6 @@ Imports:
 	DBI,
 	ggplot2,
     reticulate,
+    RSQLite,
     RMySQL
 Encoding: UTF-8
