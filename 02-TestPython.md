@@ -17,6 +17,14 @@ print("yo")
 
 ```python
 import pandas as pd
+print(pd.__version__)
+```
+
+```
+## 1.5.3
+```
+
+```python
 data = {'A': [1, 2, 3], 'B': [4, 5, 6]}
 
 # Create a pandas dataframe from the dictionary
