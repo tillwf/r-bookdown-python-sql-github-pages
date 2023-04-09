@@ -34,7 +34,7 @@ jobs:
           restore-keys: bookdown-2-
 
       - name: Install pandas
-        run: Rscript -e "library(reticulate); py_install('pandas')"
+        run: Rscript -e "library(reticulate); py_install('pandas==1.5.3')"
 
       - name: Render book
         run: Rscript -e 'bookdown::render_book("index.Rmd", quiet = TRUE)'
@@ -48,7 +48,6 @@ jobs:
   checkout-and-deploy:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    runs-on: ubuntu-20.04
     needs: build
     steps:
       - name: Checkout

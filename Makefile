@@ -10,9 +10,8 @@ pdf:
 
 gitbook:
 	rm -f _main.Rmd &&\
-	Rscript -e "bookdown::render_book('01-Test.Rmd')" &&\
+	Rscript -e "bookdown::render_book('index.Rmd')" &&\
 	chromium-browser til-bookdown.html
-# 	Rscript --quiet _render.R "bookdown::gitbook"
 
 pdf2:
 	BOOKDOWN_FULL_PDF=false Rscript --quiet _render.R "bookdown::pdf_book"
