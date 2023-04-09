@@ -1,5 +1,11 @@
 tab:unnamed-chunk-3
-hello-world
+local-installation
+intall-r-and-its-packages
+install-python-with-a-shared-library
+install-packages
+github-deployement
+python-version
+ubuntu-version
 markdown
 writing
 call-a-bash-function
