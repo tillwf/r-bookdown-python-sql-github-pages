@@ -1,7 +1,14 @@
+# R-Bookdown with Python and SQL on Github Pages
+
+This repository is meant for people who wants the minimal installation guide to make R-bookdown on Github Pages which can run Python and SQL.
+
 ## Local installation
 
 ### Intall `R` and its packages
 
+```
+sudo apt install r-cran-bookdown
+```
 
 ### Install Python with a shared library
 
@@ -16,6 +23,7 @@ python -m venv venv
 source venv/bin/activate
 pip install -U pip
 pip install -r requirements.txt
+Rscript -e "library(reticulate); py_install('pandas==1.5.3')"
 ```
 
 ## Github deployement

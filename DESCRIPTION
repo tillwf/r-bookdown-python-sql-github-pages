@@ -6,5 +6,6 @@ Imports:
 	bookdown,
 	DBI,
 	ggplot2,
-    reticulate
+    reticulate,
+    RMySQL
 Encoding: UTF-8
