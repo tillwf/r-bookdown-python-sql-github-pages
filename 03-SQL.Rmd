@@ -1,1 +1,29 @@
-03-SQL.Rmd
+# SQL
+
+```{r}
+library(DBI)
+db = dbConnect(RSQLite::SQLite(), dbname = "sql.sqlite")
+```
+
+```{sql, connection=db}
+CREATE TABLE users AS
+  SELECT 1 AS user_id, DATETIME("2023-01-01") AS created_at
+  UNION ALL
+  SELECT 2 AS user_id, DATETIME("2023-01-01") AS created_at
+  UNION ALL
+  SELECT 3 AS user_id, DATETIME("2023-01-01") AS created_at;
+
+
+CREATE TABLE trackers AS
+  SELECT 1 AS user_id, 1 AS trackable_id, DATETIME("2023-01-04") AS created_at
+  UNION ALL
+  SELECT 2 AS user_id, 1 AS trackable_id, DATETIME("2023-01-02") AS created_at
+  UNION ALL
+  SELECT 2 AS user_id, 1 AS trackable_id, DATETIME("2023-01-02") AS created_at;
+
+```
+
+```{sql, connection=db}
+SELECT * FROM users;
+SELECT * FROM trackers;
+```

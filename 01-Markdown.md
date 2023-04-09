@@ -1,0 +1,16 @@
+# Markdown
+
+## Writing
+
+**Hello World**
+
+## Call a bash function
+
+
+```bash
+echo "Hello World"
+```
+
+```
+## Hello World
+```
