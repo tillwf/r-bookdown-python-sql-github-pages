@@ -1,7 +1,8 @@
 hello-world
-test
-write-in-markdown
+markdown
+writing
 call-a-bash-function
-test-python
-print-something-in-python
+python
+check-python-version
+print-using-python
 import-pandas-and-print-a-dataframe
