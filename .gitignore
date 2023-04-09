@@ -4,6 +4,7 @@
 .Rbuildignore
 _publish.R
 *_files
+*.rds
 _book
 _main.*
 packages.bib

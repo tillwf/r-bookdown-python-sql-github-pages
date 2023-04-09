@@ -1,11 +1,16 @@
-# Test Python
+# Python
 
-## Print something in Python
+## Check Python version
 
-```{python}
-print("yo")
+```{bash}
+python --version
 ```
 
+## Print using Python
+
+```{python}
+print("Hello World")
+```
 
 ## Import pandas and print a DataFrame
 
