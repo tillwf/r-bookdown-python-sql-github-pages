@@ -4,6 +4,7 @@ Title: TIL bookdown
 Version: 0.0.1
 Imports:
 	bookdown,
+	DBI,
 	ggplot2,
     reticulate
 Encoding: UTF-8
