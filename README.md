@@ -6,7 +6,7 @@ This repository is meant for people who wants the minimal installation guide to 
 
 ### Intall `R` and its packages
 
-```
+```bash
 sudo apt install r-cran-bookdown
 ```
 

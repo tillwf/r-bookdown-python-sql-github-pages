@@ -1,6 +1,5 @@
 Type: Book
 Package: til-bookdown
-Title: TIL bookdown
 Version: 0.0.1
 Imports:
 	bookdown,

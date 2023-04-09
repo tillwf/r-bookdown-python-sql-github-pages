@@ -5,6 +5,7 @@
 _publish.R
 *_files
 *.rds
+*.sqlite
 _book
 _main.*
 packages.bib
