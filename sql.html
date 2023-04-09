@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Markdown | TIL Bookdown</title>
+  <title>4 SQL | TIL Bookdown</title>
   <meta name="description" content="Description." />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Markdown | TIL Bookdown" />
+  <meta property="og:title" content="4 SQL | TIL Bookdown" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Description." />
   <meta name="github-repo" content="tillwf/til-bookdown" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Markdown | TIL Bookdown" />
+  <meta name="twitter:title" content="4 SQL | TIL Bookdown" />
   
   <meta name="twitter:description" content="Description." />
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="python.html"/>
+<link rel="prev" href="python.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -160,26 +160,60 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="markdown" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">2</span> Markdown<a href="markdown.html#markdown" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="writing" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Writing<a href="markdown.html#writing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>Hello World</strong></p>
+<div id="sql" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> SQL<a href="sql.html#sql" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="sql.html#cb11-1" aria-hidden="true"></a><span class="kw">library</span>(DBI)</span>
+<span id="cb11-2"><a href="sql.html#cb11-2" aria-hidden="true"></a>db =<span class="st"> </span><span class="kw">dbConnect</span>(RSQLite<span class="op">::</span><span class="kw">SQLite</span>(), <span class="dt">dbname =</span> <span class="st">&quot;sql.sqlite&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb12-1"><a href="sql.html#cb12-1" aria-hidden="true"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> users <span class="kw">AS</span></span>
+<span id="cb12-2"><a href="sql.html#cb12-2" aria-hidden="true"></a>  <span class="kw">SELECT</span> <span class="dv">1</span> <span class="kw">AS</span> user_id, DATETIME(<span class="ot">&quot;2023-01-01&quot;</span>) <span class="kw">AS</span> created_at</span>
+<span id="cb12-3"><a href="sql.html#cb12-3" aria-hidden="true"></a>  <span class="kw">UNION</span> <span class="kw">ALL</span></span>
+<span id="cb12-4"><a href="sql.html#cb12-4" aria-hidden="true"></a>  <span class="kw">SELECT</span> <span class="dv">2</span> <span class="kw">AS</span> user_id, DATETIME(<span class="ot">&quot;2023-01-01&quot;</span>) <span class="kw">AS</span> created_at</span>
+<span id="cb12-5"><a href="sql.html#cb12-5" aria-hidden="true"></a>  <span class="kw">UNION</span> <span class="kw">ALL</span></span>
+<span id="cb12-6"><a href="sql.html#cb12-6" aria-hidden="true"></a>  <span class="kw">SELECT</span> <span class="dv">3</span> <span class="kw">AS</span> user_id, DATETIME(<span class="ot">&quot;2023-01-01&quot;</span>) <span class="kw">AS</span> created_at;</span>
+<span id="cb12-7"><a href="sql.html#cb12-7" aria-hidden="true"></a></span>
+<span id="cb12-8"><a href="sql.html#cb12-8" aria-hidden="true"></a></span>
+<span id="cb12-9"><a href="sql.html#cb12-9" aria-hidden="true"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> trackers <span class="kw">AS</span></span>
+<span id="cb12-10"><a href="sql.html#cb12-10" aria-hidden="true"></a>  <span class="kw">SELECT</span> <span class="dv">1</span> <span class="kw">AS</span> user_id, <span class="dv">1</span> <span class="kw">AS</span> trackable_id, DATETIME(<span class="ot">&quot;2023-01-04&quot;</span>) <span class="kw">AS</span> created_at</span>
+<span id="cb12-11"><a href="sql.html#cb12-11" aria-hidden="true"></a>  <span class="kw">UNION</span> <span class="kw">ALL</span></span>
+<span id="cb12-12"><a href="sql.html#cb12-12" aria-hidden="true"></a>  <span class="kw">SELECT</span> <span class="dv">2</span> <span class="kw">AS</span> user_id, <span class="dv">1</span> <span class="kw">AS</span> trackable_id, DATETIME(<span class="ot">&quot;2023-01-02&quot;</span>) <span class="kw">AS</span> created_at</span>
+<span id="cb12-13"><a href="sql.html#cb12-13" aria-hidden="true"></a>  <span class="kw">UNION</span> <span class="kw">ALL</span></span>
+<span id="cb12-14"><a href="sql.html#cb12-14" aria-hidden="true"></a>  <span class="kw">SELECT</span> <span class="dv">2</span> <span class="kw">AS</span> user_id, <span class="dv">1</span> <span class="kw">AS</span> trackable_id, DATETIME(<span class="ot">&quot;2023-01-02&quot;</span>) <span class="kw">AS</span> created_at;</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb13-1"><a href="sql.html#cb13-1" aria-hidden="true"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> users;</span>
+<span id="cb13-2"><a href="sql.html#cb13-2" aria-hidden="true"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> trackers;</span></code></pre></div>
+<div class="knitsql-table">
+<table>
+<caption><span id="tab:unnamed-chunk-3">Table 4.1: </span>3 records</caption>
+<thead>
+<tr class="header">
+<th align="left">user_id</th>
+<th align="left">created_at</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">2023-01-01 00:00:00</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">2023-01-01 00:00:00</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">2023-01-01 00:00:00</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="call-a-bash-function" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Call a bash function<a href="markdown.html#call-a-bash-function" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="markdown.html#cb1-1" aria-hidden="true"></a><span class="bu">echo</span> <span class="st">&quot;Hello World&quot;</span></span></code></pre></div>
-<pre><code>## Hello World</code></pre>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="python.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="python.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
