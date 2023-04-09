@@ -1,3 +1,1 @@
-- Remove Facebook Link
-- Clean Index.Rmd / DESCRIPTION
-- Be able to re-run locally SQL test with CREATE TABLE
+- `_output.yml` is not read

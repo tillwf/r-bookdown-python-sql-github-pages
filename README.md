@@ -2,6 +2,8 @@
 
 This repository is meant for people who wants the minimal installation guide to make R-bookdown on Github Pages which can run Python and SQL.
 
+[Bookdown Reference](https://bookdown.org/yihui/bookdown/)
+
 ## Local installation
 
 ### Intall `R` and its packages
