@@ -4,6 +4,8 @@ This repository is meant for people who wants the minimal installation guide to 
 
 [Bookdown Reference](https://bookdown.org/yihui/bookdown/)
 
+[Make it look nice](https://github.com/kflisikowski/statswithr/blob/master/docs/cookbook-bookdown_dress.md)
+
 ## Local installation
 
 ### Intall `R` and its packages
