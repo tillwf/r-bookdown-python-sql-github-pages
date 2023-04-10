@@ -1,0 +1,20 @@
+bookdown::gitbook:
+  config:
+    toc:
+      collapse: subsection
+      scroll_highlight: yes
+      before: |
+        <li><a href="./">R-Bookdown with Python and SQL on Github Pages</a></li>
+      after:
+        <li><a href="https://github.com/tillwf/til-bookdown" target="blank">Github Repository</a></li>
+    toolbar:
+      position: fixed
+    download: yes
+    search: yes
+    fontsettings:
+      theme: Sepia
+      family: sans
+      size: 2
+    sharing: null
+  split_by: chapter
+  highlight: tango

@@ -1,7 +1,7 @@
 book_filename: "til-bookdown"
 repo: https://github.com/tillwf/til-bookdown
-output_dir: "public"
-config_file: "output.yml"
+output_dir: public
+config_file: _output.yml
 delete_merged_file: true
 new_session: true
 
