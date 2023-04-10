@@ -1,12 +1,17 @@
 ---
 title: "R-Bookdown with Python and SQL on Github Pages"
-github-repo: tillwf/til-bookdown
+github-repo: tillwf/r-bookdown-python-sql-github-pages
 url: 'http\://github.com/tillwf'
 description: "This repository is meant for people who wants the minimal installation guide to make R-bookdown on Github Pages which can run Python and SQL."
 output: bookdown::gitbook
 ---
 
 # Local installation
+
+[Bookdown Reference](https://bookdown.org/yihui/bookdown/)
+
+[Make it look nice](https://github.com/kflisikowski/statswithr/blob/master/docs/cookbook-bookdown_dress.md)
+
 
 ## Intall `R` and its packages
 
