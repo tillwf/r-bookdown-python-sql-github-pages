@@ -37,7 +37,10 @@ Rscript -e "library(reticulate); py_install('pandas==1.5.3')"
 For the moment, I don't know how to change the version used by Github.
 Thus the current is `3.10.6`.
 
-
 ### Ubuntu version
 
 In the `build-book.yaml`, the property `runs-on` is `22.04`, but when it was `20.04` Github was still using the version `22.04`.
+
+### Github Pages Setup
+
+![Settings](https://user-images.githubusercontent.com/7115035/230853603-cf01e5cc-e6de-4c44-9667-a7a82deffcbf.png)
