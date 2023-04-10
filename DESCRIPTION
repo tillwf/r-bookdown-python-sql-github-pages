@@ -1,5 +1,5 @@
 Type: Book
-Package: til-bookdown
+Package: r-bookdown-python-sql-github-pages
 Version: 0.0.1
 Imports:
 	bookdown,
