@@ -8,6 +8,10 @@ output: bookdown::gitbook
 
 # Local installation
 
+[Bookdown Reference](https://bookdown.org/yihui/bookdown/)
+[Make it look nice](https://github.com/kflisikowski/statswithr/blob/master/docs/cookbook-bookdown_dress.md)
+
+
 ## Intall `R` and its packages
 
 ```bash
