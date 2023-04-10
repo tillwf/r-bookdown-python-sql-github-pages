@@ -1,5 +1,5 @@
-book_filename: "til-bookdown"
-repo: https://github.com/tillwf/til-bookdown
+book_filename: "r-bookdown-python-sql-github-pages"
+repo: https://github.com/tillwf/r-bookdown-python-sql-github-pages
 output_dir: public
 config_file: _output.yml
 delete_merged_file: true
